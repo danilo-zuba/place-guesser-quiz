@@ -23,20 +23,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/svInstrucoes"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="btnVoltarTelaPrincipal"
+        android:layout_height="500dp" app:layout_constraintBottom_toTopOf="@id/btnVoltarTelaPrincipal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvTitulo"
         app:layout_constraintVertical_bias="0.331">
         <TextView
-            android:id="@+id/descricao"
+            android:id="@+id/txvDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Esse é um app de Quiz sobre conhecimentos gerais, seu objetivo é acertar as questões e chegar o mais longe possível. Vão se mostradas 4 imagens de lugares famosos (ou não) do Brasil e uma pergunta. Para isso, você precisará acertar qual lugar a pergunta do jogo está se referindo."
+            android:padding="12dp"
+            android:text="O Region Quiz é um jogo de conhecimentos geográficos sobre o Brasil. Seu objetivo é responder corretamente às perguntas sobre cidades, monumentos, paisagens e outros lugares brasileiros. Durante a partida, você encontrará diferentes tipos de desafios: identificar um lugar entre quatro imagens, responder a perguntas com alternativas ou avaliar afirmações como verdadeiras ou falsas. Leia cada pergunta com atenção, escolha sua resposta e confira o resultado. As respostas corretas aumentam sua pontuação. Tente acertar o máximo de questões possível!"
             android:textColor="#F9FFDB"
             android:textSize="35sp" />
     </ScrollView>
@@ -46,10 +46,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:textSize="50sp"
         android:text="  Voltar  "
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toBottomOf="@+id/svInstrucoes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
