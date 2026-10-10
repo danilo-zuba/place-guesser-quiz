@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Instrucoes"
+    android:background="#6676FC">
+
+
+    <TextView
+        android:id="@+id/txvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Instruções"
+        android:textColor="#F9FFDB"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="btnVoltarTelaPrincipal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitulo"
+        app:layout_constraintVertical_bias="0.331">
+        <TextView
+            android:id="@+id/descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esse é um app de Quiz sobre conhecimentos gerais, seu objetivo é acertar as questões e chegar o mais longe possível. Vão se mostradas 4 imagens de lugares famosos (ou não) do Brasil e uma pergunta. Para isso, você precisará acertar qual lugar a pergunta do jogo está se referindo."
+            android:textColor="#F9FFDB"
+            android:textSize="35sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnVoltarTelaPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:textSize="50sp"
+        android:text="  Voltar  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
