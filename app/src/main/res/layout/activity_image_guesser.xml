@@ -34,39 +34,38 @@
 
     <ImageView
         android:id="@+id/ivImagem1"
+        android:src="@drawable/cristoredentor"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="24dp"
-        android:scaleType="centerCrop"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="58dp"
-        app:layout_constraintEnd_toStartOf="@+id/ivImagem3"
+        app:layout_constraintEnd_toStartOf="@+id/ivImagem2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvEnunciado"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintTop_toBottomOf="@+id/txvEnunciado" />
 
     <ImageView
         android:id="@+id/ivImagem2"
         android:layout_width="150dp"
         android:scaleType="centerCrop"
         android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivImagem1"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:layout_marginStart="52dp"
+        android:src="@drawable/palacioplanalto"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toEndOf="@id/ivImagem1"
+        app:layout_constraintTop_toBottomOf="@+id/txvEnunciado"
+        app:layout_constraintBottom_toTopOf="@id/ivImagem4"/>
 
     <ImageView
         android:id="@+id/ivImagem3"
         android:layout_width="150dp"
         android:scaleType="centerCrop"
         android:layout_height="150dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintStart_toEndOf="@id/ivImagem1"
-        app:layout_constraintTop_toBottomOf="@+id/txvEnunciado"
-        app:layout_constraintBottom_toTopOf="@id/ivImagem4"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/ifnmg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagem1"/>
 
     <ImageView
         android:id="@+id/ivImagem4"
@@ -75,9 +74,9 @@
         android:scaleType="centerCrop"
         android:layout_marginStart="54dp"
         android:layout_marginTop="58dp"
-        app:layout_constraintStart_toEndOf="@+id/ivImagem2"
-        app:layout_constraintTop_toBottomOf="@+id/ivImagem3"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintStart_toEndOf="@+id/ivImagem3"
+        app:layout_constraintTop_toBottomOf="@+id/ivImagem2"
+        android:src="@drawable/maracana"/>
 
     <TextView
         android:id="@+id/txvResposta"
