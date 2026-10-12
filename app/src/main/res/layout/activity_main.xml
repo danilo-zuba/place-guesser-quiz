@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.67"
+        android:contentDescription="Imagem de fundo do App"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="154dp"
         android:text="Jogar"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvTitulo" />
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="Instruções"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,9 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:text="Créditos"
-        android:textSize="40dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInstrucoes" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInstrucoes"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

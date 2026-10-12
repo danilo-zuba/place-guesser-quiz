@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var btnJogar = findViewById<Button>(R.id.btnJogar)
+        val btnJogar = findViewById<Button>(R.id.btnJogar)
         btnJogar.setOnClickListener {
             val intent = Intent(this, image_guesser::class.java)
             startActivity(intent)
         }
-        var btnInstrucoes = findViewById<Button>(R.id.btnInstrucoes)
+        val btnInstrucoes = findViewById<Button>(R.id.btnInstrucoes)
         btnInstrucoes.setOnClickListener {
             val intent = Intent(this, Instrucoes::class.java)
             startActivity(intent)
