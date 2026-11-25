@@ -28,5 +28,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Instrucoes::class.java)
             startActivity(intent)
         }
+        val btnCreditos = findViewById<Button>(R.id.btnCreditos)
+        btnCreditos.setOnClickListener {
+            val intent = Intent(this, Creditos::class.java)
+            startActivity(intent)
+        }
     }
 }
