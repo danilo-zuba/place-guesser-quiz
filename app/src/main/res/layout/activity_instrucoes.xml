@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Instrucoes"
-    android:background="@drawable/fundo_paisagem">
+    android:background="@drawable/fundo12">
 
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_height="72dp"
         android:backgroundTint="#00000000"
         android:justificationMode="inter_character"
-        android:text="<"
+        android:text="&lt;"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="30sp"

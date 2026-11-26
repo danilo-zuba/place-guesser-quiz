@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <!-- 1) Permissão de internet: coloque ACIMA da tag <application> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,17 +28,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".image_guesser"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+                android:name=".image_guesser"
+                android:exported="false"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Instrucoes"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".TelaResultados"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+                android:name=".TelaResultados"
+                android:exported="false"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Creditos"
             android:exported="false"

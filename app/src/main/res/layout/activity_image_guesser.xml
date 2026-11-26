@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".image_guesser"
-    android:background="@drawable/fundo_paisagem"
-    >
+    android:background="@drawable/fundo12"
+    tools:context=".image_guesser">
 
     <TextView
         android:id="@+id/txvCabecalho"
@@ -17,90 +16,212 @@
         android:layout_marginTop="16dp"
         android:text="Place Guesser"
         android:textColor="#476D7D"
-        android:textSize="40sp"
+        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txvEnunciado"
+        android:id="@+id/txvProgresso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textSize="30sp"
-        android:text="Qual dessas imagem mostra o Cristo Redentor?"
-        android:textAlignment="center"
+        android:layout_marginStart="16dp"
+        android:textColor="#1B1B1B"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvCabecalho" />
 
-    <ImageView
-        android:id="@+id/ivImagem1"
-        android:src="@drawable/cristoredentor"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="58dp"
-        app:layout_constraintEnd_toStartOf="@+id/ivImagem2"
+    <ScrollView
+        android:id="@+id/scrollConteudo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/barraInferior"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvEnunciado" />
+        app:layout_constraintTop_toBottomOf="@+id/txvProgresso">
 
-    <ImageView
-        android:id="@+id/ivImagem2"
-        android:layout_width="150dp"
-        android:scaleType="centerCrop"
-        android:layout_height="150dp"
-        android:layout_marginStart="52dp"
-        android:src="@drawable/palacioplanalto"
-        android:layout_marginTop="64dp"
-        app:layout_constraintStart_toEndOf="@id/ivImagem1"
-        app:layout_constraintTop_toBottomOf="@+id/txvEnunciado"
-        app:layout_constraintBottom_toTopOf="@id/ivImagem4"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/ivImagem3"
-        android:layout_width="150dp"
-        android:scaleType="centerCrop"
-        android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/ifnmg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivImagem1"/>
+            <TextView
+                android:id="@+id/txvEnunciado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1B1B1B"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/ivImagem4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="58dp"
-        app:layout_constraintStart_toEndOf="@+id/ivImagem3"
-        app:layout_constraintTop_toBottomOf="@+id/ivImagem2"
-        android:src="@drawable/maracana"/>
+            <ImageView
+                android:id="@+id/ivPergunta"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Imagem da pergunta"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/txvResposta"
+            <LinearLayout
+                android:id="@+id/layoutImagens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivImagem1"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:contentDescription="Alternativa 1"
+                        android:padding="6dp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/ivImagem2"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:contentDescription="Alternativa 2"
+                        android:padding="6dp"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivImagem3"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:contentDescription="Alternativa 3"
+                        android:padding="6dp"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/ivImagem4"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:contentDescription="Alternativa 4"
+                        android:padding="6dp"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnOpcao1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnOpcao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnOpcao3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnOpcao4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:textSize="35sp"
-        android:text="Resposta"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnSair"
-        android:layout_width="133dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Sair"
-        android:textSize="30sp"
+    <LinearLayout
+        android:id="@+id/barraInferior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txvResposta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#E6FFFFFF"
+            android:padding="12dp"
+            android:textColor="#1B1B1B"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnProximo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Próxima"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sair"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
